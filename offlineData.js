@@ -1,14 +1,3 @@
-/*
- * 
- * Find more about this app by visiting
- * http://miniapps.co.uk/
- *
- * Copyright (c) 2010 Alex Gibson, http://miniapps.co.uk/
- * Released under MIT license
- * http://miniapps.co.uk/license/
- * 
- */
-
 //main function to be called on submit
 function processData() {
 
@@ -91,10 +80,9 @@ function sendLocalDataToServer() {
 	status.innerHTML = 'Online';
     
     var i = 0,
-		length = window.localStorage.length - 1,
 		dataString = '';
 			
-	while (i <= length) {	
+	while (i <= window.localStorage.length - 1) {	
 		
 		dataString = localStorage.key(i);
 		
@@ -104,8 +92,7 @@ function sendLocalDataToServer() {
 		else { i++; }
 	} 
 	
-	length = window.localStorage.length;
-	document.querySelector('#local-count').innerHTML = length;
+	document.querySelector('#local-count').innerHTML = window.localStorage.length;
 }
 
 //called when device goes offline
