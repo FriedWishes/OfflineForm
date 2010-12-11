@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Offline Form Demo</title>
+
+<!-- Mobile Viewport -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+<!-- iOS Full Screen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- iOS Status Bar Style (default, black, black-translucent) -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<!-- iOS and BlackBerry tel number auto format prevention -->
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="x-rim-auto-match" content="none" />
+
+<!-- CSS Styles -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- iOS Startup Image 320x460px portrait -->
+<link rel="apple-touch-startup-image" href="" />
+
+<!-- Icons -->
+<link rel="icon" type="image/ico" href="" />
+<link rel="apple-touch-icon" href="" />
+<link rel="apple-touch-icon" sizes="72x72" href="" />
+<link rel="apple-touch-icon" sizes="114x114" href="" />
+
+<!-- Main JS -->
+<script type="text/javascript" src="offlineData.js"></script>
+</head>
+<body>
+
+<article role="main">
+ 
+    <header role="banner">
+    
+		<h1>Offline Form</h1> 
+		
+		<button type="button" class="left-header-button">Button</button>
+		<button type="button" class="right-header-button">Button</button> 
+		
+    </header> 
+    
+    <section>
+    
+    	<p>When offline, submitted data will be stored locally. When online, locally stored data will be resent to the server.</p>
+    
+		<input type="text" id="first-name" maxlength="75" autocorrect placeholder="Enter first name" />
+		<input type="text" id="last-name" maxlength="75" autocorrect placeholder="Enter last name" />
+		
+		<button type="submit" id="submit" class="oneup">Submit</button>
+		
+		<p>Locally stored items: <span id="local-count"></span></p>
+		
+    </section>
+    
+    <footer>
+    
+    	<p>You are working: <span id="status"></span></p>
+    
+    </footer> 
+	
+</article>
+
+</body>
+</html>
