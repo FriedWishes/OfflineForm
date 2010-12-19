@@ -46,7 +46,7 @@ function sendDataToServer(dataString) {
 	//myRequest.send();
 	
 	window.localStorage.removeItem(dataString); //remove this line as only for example
-	console.log('Sent to server: ' + dataString + ''); //remove this line as only for example
+	alert('Sent to server: ' + dataString + ''); //remove this line as only for example
 }
 
 //called on submit if device is offline from processData()
@@ -57,7 +57,7 @@ function saveDataLocally(dataString) {
 	
 	try {
 		localStorage.setItem(timeStamp, dataString);
-		console.log('Saved locally: ' + dataString + '');
+		alert('Saved locally: ' + dataString + '');
 	} catch (e) {
 			
 		if (e == QUOTA_EXCEEDED_ERR) {
